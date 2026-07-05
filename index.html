@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kioshi Shimabuku — Estrategia Visual, Identidad y Sistemas Digitales</title>
+  <meta name="description" content="Estrategia visual, identidad de marca, sistemas digitales y dirección creativa para marcas que buscan destacar. Basado en Lima, Perú.">
+  <meta property="og:title" content="Kioshi Shimabuku — Estrategia Visual">
+  <meta property="og:description" content="Identidad, sistemas digitales y dirección creativa para marcas que buscan destacar.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://beautiful-cocada-9c9012.netlify.app/img/hero-visual.webp">
+  <meta property="og:image:width" content="1774">
+  <meta property="og:image:height" content="887">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://beautiful-cocada-9c9012.netlify.app/img/hero-visual.webp">
+  
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kioshi Shimabuku",
+    "givenName": "Kioshi",
+    "familyName": "Shimabuku",
+    "jobTitle": ["Estratega Visual", "Director Creativo", "Educador"],
+    "email": "kioshishimabuku@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jesús María",
+      "addressRegion": "Lima",
+      "addressCountry": "PE"
+    },
+    "knowsAbout": ["Diseño Gráfico", "Diseño de Juguetes", "Inteligencia Artificial", "Moda", "Identidad Cultural"],
+    "worksFor": [
+      {"@type": "Organization", "name": "Chio Lecca"},
+      {"@type": "Organization", "name": "SISE"},
+      {"@type": "CollegeOrUniversity", "name": "Universidad del Pacífico"}
+    ],
+    "description": "Estratega visual, director creativo y educador peruano. Impactando la cultura a través del diseño, la tecnología y la IA."
+  }
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  
+  <style>
+    /* ===== BRAND TOKENS (@theme) ===== */
+    :root {
+      /* Negro puro */
+      --ks-black: oklch(0% 0 0);
+      --ks-black-soft: oklch(12% 0.003 280);
+      
+      /* Grises fríos */
+      --ks-gray-700: oklch(35% 0.008 280);
+      --ks-gray-500: oklch(52% 0.01 280);
+      --ks-gray-300: oklch(72% 0.01 278);
+      --ks-gray-100: oklch(88% 0.005 278);
+      --ks-gray-50: oklch(95% 0.002 280);
+      
+      /* Blanco */
+      --ks-white: oklch(100% 0 0);
+      --ks-white-off: oklch(98% 0.002 280);
+      
+      /* Verde menta (acento) */
+      --ks-mint: oklch(80% 0.12 160);
+      --ks-mint-dark: oklch(65% 0.10 160);
+      --ks-mint-light: oklch(90% 0.08 160);
+      
+      /* Variables funcionales */
+      --color-brand: var(--ks-black);
+      --color-brand-hover: var(--ks-gray-700);
+      --color-accent: var(--ks-mint);
+      --color-accent-hover: var(--ks-mint-dark);
+      --color-surface: var(--ks-white);
+      --color-surface-alt: var(--ks-black);
+      --color-text: var(--ks-black-soft);
+      --color-text-inverse: var(--ks-gray-100);
+      --color-border: var(--ks-gray-300);
+      --color-muted: var(--ks-gray-500);
+      --font-display: 'Source Code Pro', 'Courier New', monospace;
+      --font-body: 'Source Code Pro', 'Courier New', monospace;
+      --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+      --spacing-section: clamp(4rem, 10vw, 8rem);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text);
+      background: var(--color-surface);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: var(--spacing-section) 0; }
+    .section-alt { background: var(--color-surface-alt); color: var(--color-text-inverse); }
+    .label {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 1rem;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1rem 0;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .header.scrolled { box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; }
+    .header-logo { font-family: var(--font-display); font-size: 1.25rem; font-style: italic; }
+    .header-nav { display: flex; gap: 2rem; align-items: center; }
+    .header-nav a { font-size: clamp(0.875rem, 2vw, 1rem); font-weight: 500; padding: 0.75rem 0; }
+    .header-cta {
+      font-size: clamp(0.875rem, 2vw, 1rem); font-weight: 600;
+      padding: 0.75rem 1.25rem;
+      border: 1.5px solid var(--color-brand);
+      border-radius: 0.375rem;
+    }
+
+    /* ===== MOBILE NAV ===== */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 0.35rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 101;
+    }
+    .hamburger span {
+      display: block;
+      width: 1.5rem;
+      height: 2px;
+      background: var(--color-text);
+      border-radius: 1px;
+      transition: transform 300ms var(--ease-out), opacity 300ms var(--ease-out);
+    }
+    .hamburger.active span:nth-child(1) { transform: translateY(0.45rem) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-0.45rem) rotate(-45deg); }
+    @media (max-width: 640px) {
+      .header-nav {
+        position: fixed; top: 0; right: 0;
+        flex-direction: column;
+        gap: 1rem;
+        width: min(75vw, 300px);
+        height: 100dvh;
+        padding: 5rem 2rem 2rem;
+        background: rgba(255,255,255,0.97);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-left: 1px solid var(--color-border);
+        transform: translateX(100%);
+        transition: transform 300ms var(--ease-out);
+        z-index: 100;
+      }
+      .header-nav.open { transform: translateX(0); }
+      .header-nav a { font-size: 1rem; padding: 0.75rem 0; }
+      .hamburger { display: flex; }
+    }
+
+    /* ===== HERO (full-width background) ===== */
+    .hero {
+      min-height: 100dvh;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      background: var(--ks-black);
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url('img/hero-visual.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.6;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, transparent 50%, rgba(0,0,0,0.3) 100%);
+    }
+    .hero .container { position: relative; z-index: 2; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .hero::before { opacity: 0.3; }
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--ks-gray-100);
+      margin-bottom: 1.5rem;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 2rem; height: 1px; background: var(--color-accent);
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.1;
+      font-style: italic;
+      color: var(--ks-white);
+    }
+    .hero-title em { font-style: normal; color: var(--color-accent); }
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--ks-gray-100);
+      margin-top: 1.5rem;
+      max-width: 32rem;
+      line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      background: var(--color-brand);
+      color: white;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none; border-radius: 0.375rem;
+      cursor: pointer;
+    }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      background: transparent;
+      color: var(--ks-white);
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 1.5px solid var(--ks-gray-100);
+      border-radius: 0.375rem;
+      cursor: pointer;
+    }
+
+    /* ===== SERVICES ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    @media (max-width: 768px) {
+      .services-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+    .service-card {
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--color-border);
+      border-radius: 0.75rem;
+      background: var(--ks-white);
+    }
+    .service-card.featured { border-color: var(--color-brand); position: relative; }
+    .service-card.featured::before {
+      content: 'POPULAR';
+      position: absolute; top: -0.75rem; right: 1.5rem;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 0.25rem 0.75rem;
+      background: var(--ks-mint);
+      color: white;
+      border-radius: 1rem;
+    }
+    .service-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+    .service-name { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .service-desc { font-size: clamp(0.9rem, 2.5vw, 1rem); color: var(--color-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+    .service-price { font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 0.25rem; }
+    .service-price small { font-family: var(--font-body); font-size: 0.8rem; color: var(--color-muted); font-weight: 400; }
+    .strikethrough { text-decoration: line-through; opacity: 0.5; }
+
+    /* ===== PROJECTS ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+    .project-card {
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 0.75rem;
+    }
+    .project-image {
+      width: 100%; aspect-ratio: 4/3;
+      object-fit: cover; border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      transition: transform 300ms var(--ease-out);
+    }
+    .project-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-style: italic;
+      margin-bottom: 0.75rem;
+    }
+    .project-desc { font-size: clamp(0.875rem, 2.5vw, 1rem); opacity: 0.7; line-height: 1.6; }
+
+    /* ===== ABOUT ===== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    .about-visual {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 1rem;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    }
+    .about-text h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .about-text p { font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
+    .about-logos { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+    .about-logo-item {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--color-border);
+      border-radius: 0.5rem;
+      background: var(--ks-white);
+    }
+    .about-logo-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .about-logo-name { font-weight: 600; }
+    .about-logo-role { font-size: 0.8rem; color: var(--color-muted); }
+
+    /* ===== CTA ===== */
+    .cta-section {
+      text-align: center;
+      padding: clamp(4rem, 8vw, 6rem) 0;
+    }
+    .cta-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 1rem;
+    }
+    .cta-sub {
+      font-size: 1.1rem;
+      color: var(--ks-gray-300);
+      max-width: 32rem;
+      margin: 0 auto 2.5rem;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer { padding: 3rem 0; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; opacity: 0.6; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; }
+    @media (max-width: 640px) {
+      .footer-inner { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+
+    /* ===== ANIMATIONS (reduced) ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    /* ===== INTERACTIONS ===== */
+    @media (hover: hover) and (pointer: fine) {
+      .header-cta:hover { background: var(--color-brand); color: white; }
+      .btn-secondary:hover { border-color: var(--color-brand); }
+      .project-card:hover .project-image { transform: scale(1.03); }
+      .service-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); }
+      .hero-title em { transition: color 300ms var(--ease-out); }
+      .hero-title em:hover { color: var(--color-accent); }
+    }
+    .btn-primary:active, .btn-secondary:active { transform: scale(0.97); }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="header-logo">Kioshi Shimabuku</a>
+      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="header-nav" id="header-nav">
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#proyectos" class="nav-link">Proyectos</a>
+        <a href="#about" class="nav-link">Sobre mí</a>
+        <a href="#contacto" class="header-cta nav-link">Conversemos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO con fondo de imagen real -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-tag">Estrategia Visual · Lima, Perú</div>
+        <h1 class="hero-title">Diseño que<em> trasciende</em> lo esperado</h1>
+        <p class="hero-sub">
+          Identidad, sistemas digitales y dirección creativa para marcas que buscan 
+          impactar la cultura peruana a través del diseño con propósito.
+        </p>
+        <div class="hero-actions">
+          <a href="#contacto" class="btn-primary">Trabajemos juntos →</a>
+          <a href="#proyectos" class="btn-secondary">Ver proyectos</a>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="servicios" class="section">
+    <div class="container">
+      <span class="label">Servicios</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.5rem);margin-bottom:2rem;line-height:1.2;">Soluciones que escalan<br>con tu visión</h2>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="service-icon">🖥️</span>
+          <h3 class="service-name">Página Simple</h3>
+          <p class="service-desc">Para creativos, pequeños negocios y profesionales que necesitan presencia digital rápida. Landing page estratégica con dirección de arte y copy alineado a tu marca. Entrega: 1 semana.</p>
+          <div class="service-price"><span class="strikethrough">S/700</span> <strong>S/350</strong> <small>único</small></div>
+        </div>
+        <div class="service-card featured reveal">
+          <span class="service-icon">⚡</span>
+          <h3 class="service-name">Sistema Web</h3>
+          <p class="service-desc">Sitio web completo con arquitectura de información, sistema visual coherente, formularios inteligentes y SEO on-page. Para marcas establecidas que necesitan estructura digital sólida. Entrega: 2-3 semanas.</p>
+          <div class="service-price"><span class="strikethrough">S/1,500</span> <strong>S/700</strong> <small>único</small></div>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">🌐</span>
+          <h3 class="service-name">Ecosistema Digital</h3>
+          <p class="service-desc">Dirección creativa completa liderada por Kioshi + sistema web + automatizaciones + brand guidelines digitales. Para empresas que necesitan un ecosistema digital integral.</p>
+          <div class="service-price"><strong>Desde S/2,500</strong> <small>— cotizar según alcance</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="proyectos" class="section section-alt">
+    <div class="container">
+      <span class="label">Proyectos</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.5rem);margin-bottom:2rem;line-height:1.2;">Creando cultura,<br>un proyecto a la vez</h2>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <img src="img/metalmorfosis.webp" alt="Metalmorfosis pin" class="project-image" loading="lazy" width="1024" height="768">
+          <h3 class="project-name">Metalmorfosis</h3>
+          <p class="project-desc">Editorial de pines con identidad cultural peruana. Colecciones limitadas que reimaginan símbolos nacionales con estética contemporánea. Co-fundado con Jotaconpe.</p>
+        </div>
+        <div class="project-card reveal">
+          <img src="img/libretacticas.webp" alt="Libretácticas producto" class="project-image" loading="lazy" width="1536" height="1024">
+          <h3 class="project-name">Libretácticas</h3>
+          <p class="project-desc">Sistema de captura de ideas para mentes que no se detienen. Libreta táctica de cintura con apertura one-hand, cierre magnético y lapicero integrado. Founders Edition seriada.</p>
+        </div>
+        <div class="project-card reveal">
+          <img src="img/llami-claw.webp" alt="Llami Claw" class="project-image" loading="lazy" width="1122" height="1402">
+          <h3 class="project-name">Llami Claw</h3>
+          <p class="project-desc">Asistente AI autónoma con voz, memoria y criterio. Más de 40 skills especializadas instaladas. Una socia creativa entrenada para trabajar, no una herramienta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div>
+        <img src="img/kioshi-profile.webp" alt="Kioshi Shimabuku" class="about-visual" loading="lazy" width="1024" height="1536">
+      </div>
+      <div class="about-text">
+        <span class="label">Sobre mí</span>
+        <h2>Estratega visual,<br>director creativo,<br>educador</h2>
+        <p>
+          Estratega visual, director creativo y educador peruano. Desde mi casa-taller 
+          <strong>Llamicornios Funky Paradas</strong> en Jesús María, Lima, desarrollo 
+          proyectos que cruzan moda, tecnología e identidad cultural.
+        </p>
+        <p>
+          Docente en <strong>Chio Lecca</strong> (Diseño Digital en Joyería) y <strong>SISE</strong> 
+          (Illustrator para Diseño de Interiores). Creador de Metalmorfosis, Libretácticas y Llami Claw.
+        </p>
+        <p>Mi propósito: impactar positivamente en la cultura peruana a través de la creatividad.</p>
+        <div class="about-logos">
+          <div class="about-logo-item reveal">
+            <span class="about-logo-icon">🎨</span>
+            <div>
+              <div class="about-logo-name">Chio Lecca</div>
+              <div class="about-logo-role">Docente · Diseño Digital Joyería</div>
+            </div>
+          </div>
+          <div class="about-logo-item reveal">
+            <span class="about-logo-icon">📐</span>
+            <div>
+              <div class="about-logo-name">SISE</div>
+              <div class="about-logo-role">Docente · Illustrator Diseño de Interiores</div>
+            </div>
+          </div>
+          <div class="about-logo-item reveal">
+            <span class="about-logo-icon">🏛️</span>
+            <div>
+              <div class="about-logo-name">Universidad del Pacífico</div>
+              <div class="about-logo-role">Profesor · IA Aplicada a Moda</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contacto" class="section section-alt">
+    <div class="container cta-section">
+      <h2 class="cta-title">¿Listo para crear algo<br>que realmente importe?</h2>
+      <p class="cta-sub">
+        Cada proyecto empieza con una conversación. Hablemos de tu marca, tu idea 
+        o ese proyecto que llevas tiempo queriendo materializar.
+      </p>
+      <a href="mailto:kioshishimabuku@gmail.com" class="btn-primary">kioshishimabuku@gmail.com →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="section-alt">
+    <div class="container footer">
+      <div class="footer-inner">
+        <span>© 2026 Kioshi Shimabuku</span>
+        <span>Jesús María, Lima · Hecho a mano con intención</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('header-nav');
+    if (hamburger && nav) {
+      hamburger.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        hamburger.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', isOpen);
+      });
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1, rootMargin: '50px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      document.getElementById('header').classList.toggle('scrolled', currentScroll > 50);
+      lastScroll = currentScroll;
+    }, { passive: true });
+  </script>
+</body>
+</html>
