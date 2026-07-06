@@ -102,9 +102,7 @@
     .header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 1rem 0;
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.95);
       border-bottom: 1px solid var(--color-border);
     }
     .header.scrolled { box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
@@ -149,9 +147,7 @@
         width: min(75vw, 300px);
         height: 100dvh;
         padding: 5rem 2rem 2rem;
-        background: rgba(255,255,255,0.97);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: rgba(255,255,255,0.98);
         border-left: 1px solid var(--color-border);
         transform: translateX(100%);
         transition: transform 300ms var(--ease-out);
@@ -181,7 +177,7 @@
     .hero::after {
       content: '';
       position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, transparent 50%, rgba(0,0,0,0.3) 100%);
+      background: rgba(0,0,0,0.5);
     }
     .hero .container { position: relative; z-index: 2; }
     .hero-grid {
@@ -408,7 +404,7 @@
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="#" class="header-logo">KIOSHI SHIMABUKU</a>
-      <nav class="header-nav" id="header-nav">
+      <nav class="header-nav" id="header-nav" aria-label="Navegación principal">
         <a href="#servicios" class="nav-link">Branding</a>
         <a href="#proyectos" class="nav-link">Socios</a>
         <a href="#about" class="nav-link">Sobre mí</a>
@@ -420,8 +416,9 @@
     </div>
   </header>
 
+  <main>
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" aria-label="Hero">
     <div class="container">
       <div class="hero-grid">
         <div>
@@ -448,17 +445,17 @@
       <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.5rem);margin-bottom:2rem;line-height:1.2;">Soluciones que escalan<br>con tu visión</h2>
       <div class="services-grid">
         <div class="service-card reveal">
-          <span class="service-icon">🎯</span>
+          <span class="service-icon">◆</span>
           <h3 class="service-name">Estrategia Visual</h3>
           <p class="service-desc">Dirección creativa y estratégica para marcas que buscan posicionarse con intención. Identidad visual, sistemas de diseño y narrativa de marca.</p>
         </div>
         <div class="service-card reveal">
-          <span class="service-icon">⚡</span>
+          <span class="service-icon">●</span>
           <h3 class="service-name">Sistemas Creativos IA</h3>
           <p class="service-desc">Integración de herramientas de IA en flujos creativos y productivos. Automatización, generación de contenido y sistemas inteligentes para equipos creativos.</p>
         </div>
         <div class="service-card reveal">
-          <span class="service-icon">🔧</span>
+          <span class="service-icon">■</span>
           <h3 class="service-name">Fabricación Digital</h3>
           <p class="service-desc">Prototipado, modelado 3D y producción con tecnologías de fabricación digital. Del concepto al objeto físico con precisión y estética.</p>
         </div>
@@ -625,6 +622,7 @@
     </div>
   </section>
 
+  </main>
   <!-- FOOTER -->
   <footer class="section-alt">
     <div class="container footer">
