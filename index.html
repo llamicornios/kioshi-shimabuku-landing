@@ -3,17 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KIOSHI SHIMABUKU — Estrategia Visual, IA Creativa y Fabricación Digital</title>
-  <meta name="description" content="Estrategia visual, sistemas creativos con IA, fabricación digital y dirección creativa desde Lima, Perú.">
-  <meta property="og:title" content="KIOSHI SHIMABUKU — Estrategia Visual e IA Creativa">
-  <meta property="og:description" content="Estrategia visual, sistemas creativos con IA, fabricación digital y proyectos culturales desde Lima, Perú.">
+  <title>Kioshi Shimabuku — Estrategia Visual, Identidad y Sistemas Digitales</title>
+  <meta name="description" content="Estrategia visual, identidad de marca, sistemas digitales y dirección creativa. Basado en Lima, Perú.">
+  <meta property="og:title" content="Kioshi Shimabuku — Estrategia Visual">
+  <meta property="og:description" content="Identidad, sistemas digitales y dirección creativa para marcas que buscan destacar.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://voluble-queijadas-7b35c6.netlify.app/img/hero-visual.webp">
-  <meta property="og:image:width" content="1774">
-  <meta property="og:image:height" content="887">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://voluble-queijadas-7b35c6.netlify.app/img/hero-visual.webp">
   
+  <!-- JSON-LD Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -21,7 +18,7 @@
     "name": "Kioshi Shimabuku",
     "givenName": "Kioshi",
     "familyName": "Shimabuku",
-    "jobTitle": ["Estratega Visual", "Director Creativo", "Educador", "Diseñador de Sistemas Creativos IA"],
+    "jobTitle": ["Estratega Visual", "Director Creativo", "Educador"],
     "email": "kioshishimabuku@gmail.com",
     "address": {
       "@type": "PostalAddress",
@@ -29,199 +26,142 @@
       "addressRegion": "Lima",
       "addressCountry": "PE"
     },
-    "knowsAbout": ["Diseño Gráfico", "Diseño de Juguetes", "Inteligencia Artificial", "Moda", "Fabricación Digital", "Identidad Cultural"],
+    "knowsAbout": ["Diseño Gráfico", "Diseño de Juguetes", "Inteligencia Artificial", "Moda", "Identidad Cultural"],
     "worksFor": [
       {"@type": "Organization", "name": "Chio Lecca"},
       {"@type": "Organization", "name": "SISE"},
       {"@type": "CollegeOrUniversity", "name": "Universidad del Pacífico"}
     ],
-    "description": "Estratega visual, director creativo y educador peruano. Cruza diseño, moda, tecnología, IA y fabricación digital para crear proyectos con identidad cultural."
+    "description": "Estratega visual, director creativo y educador peruano. Impactando la cultura a través del diseño, la tecnología y la IA."
   }
   </script>
   
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="img/hero-visual.webp" type="image/webp">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
+    /* ===== TAILWIND v4 @theme TOKENS ===== */
     :root {
       --ks-black: oklch(0% 0 0);
       --ks-black-soft: oklch(12% 0.003 280);
+      --ks-black-mid: oklch(22% 0.005 275);
+      --ks-red: oklch(50% 0.21 29);
+      --ks-red-emphasis: oklch(42% 0.18 29);
       --ks-gray-700: oklch(35% 0.008 280);
       --ks-gray-500: oklch(52% 0.01 280);
       --ks-gray-300: oklch(72% 0.01 278);
       --ks-gray-100: oklch(88% 0.005 278);
-      --ks-gray-50: oklch(95% 0.002 280);
+      --ks-gold: oklch(65% 0.14 78);
+      --ks-gold-soft: oklch(75% 0.09 82);
+      --ks-cream: oklch(95% 0.007 90);
       --ks-white: oklch(100% 0 0);
       --ks-white-off: oklch(98% 0.002 280);
-      --ks-mint: oklch(80% 0.12 160);
-      --ks-mint-dark: oklch(65% 0.10 160);
-      --ks-mint-light: oklch(90% 0.08 160);
-      --color-brand: var(--ks-black);
-      --color-brand-hover: var(--ks-gray-700);
-      --color-accent: var(--ks-mint);
-      --color-accent-hover: var(--ks-mint-dark);
-      --color-surface: var(--ks-white);
+      
+      --color-brand: var(--ks-red);
+      --color-brand-light: var(--ks-red-emphasis);
+      --color-accent: var(--ks-gold);
+      --color-surface: var(--ks-cream);
       --color-surface-alt: var(--ks-black);
       --color-text: var(--ks-black-soft);
       --color-text-inverse: var(--ks-gray-100);
       --color-border: var(--ks-gray-300);
       --color-muted: var(--ks-gray-500);
-      --color-muted-inverse: var(--ks-gray-100);
-      --color-accent-readable: var(--ks-mint-dark);
-      --font-display: 'Source Code Pro', 'Courier New', monospace;
-      --font-body: 'Source Code Pro', 'Courier New', monospace;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+      --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
       --spacing-section: clamp(4rem, 10vw, 8rem);
-      --radius-sm: 0.375rem;
-      --radius-md: 0.5rem;
-      --space-card: 2rem;
-      --overlay-hero: rgba(0,0,0,0.5);
     }
 
+    /* ===== RESET ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: var(--font-body);
       color: var(--color-text);
       background: var(--color-surface);
-      line-height: 1.5;
-      overflow-x: hidden;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
     img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; text-decoration: none; }
-    a:focus-visible, button:focus-visible {
-      outline: 2px solid var(--color-accent);
-      outline-offset: 4px;
-    }
+
+    /* ===== GLOBAL ===== */
     .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-    .section { padding: var(--spacing-section) 0; scroll-margin-top: 5.5rem; }
+    .section { padding: var(--spacing-section) 0; }
     .section-alt { background: var(--color-surface-alt); color: var(--color-text-inverse); }
-    .skip-link {
-      position: fixed;
-      top: 0.75rem;
-      left: 0.75rem;
-      z-index: 200;
-      transform: translateY(-200%);
-      background: var(--ks-white);
-      color: var(--ks-black);
-      border: 2px solid var(--ks-black);
-      padding: 0.75rem 1rem;
-      font-weight: 700;
-    }
-    .skip-link:focus { transform: translateY(0); }
+    .section-alt a { color: var(--color-accent); }
     .label {
       display: inline-block;
       font-family: var(--font-body);
-      font-size: 1.5rem;
+      font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--color-accent-readable);
+      color: var(--color-accent);
       margin-bottom: 1rem;
     }
-    .section-alt .label { color: var(--color-accent); }
-    .section-alt .project-desc,
-    .section-alt .about-text p,
-    .section-alt .about-logo-role,
-    .section-alt .footer-inner { color: var(--color-muted-inverse); }
 
-    /* ===== HEADER SCROLL EFFECT ===== */
+    /* ===== HEADER / NAV ===== */
     .header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 1rem 0;
-      background: rgba(255,255,255,0.95);
-      border-bottom: 1px solid transparent;
-      transition: background-color 300ms var(--ease-out), border-color 300ms var(--ease-out), box-shadow 300ms var(--ease-out);
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      transition: transform 300ms var(--ease-out), box-shadow 300ms var(--ease-out);
     }
-    .header.scrolled {
-      background: rgba(255,255,255,0.98);
-      border-bottom-color: var(--color-border);
-      box-shadow: 0 1px 12px rgba(0,0,0,0.08);
+    .header.scrolled { box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
     }
-    .header-inner { display: flex; align-items: center; justify-content: space-between; }
-    .header-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; }
-    .header-nav { display: flex; gap: clamp(0.75rem, 1.6vw, 1.5rem); align-items: center; }
-    .header-nav a { font-size: clamp(0.8125rem, 1.4vw, 0.95rem); font-weight: 500; padding: 0.75rem 0; }
+    .header-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-style: italic;
+    }
+    .header-nav { display: flex; gap: 2rem; align-items: center; }
+    .header-nav a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      position: relative;
+      padding: 0.25rem 0;
+      transition: color 200ms var(--ease-out);
+    }
+    .header-nav a::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0;
+      width: 0; height: 1.5px;
+      background: var(--color-brand);
+      transition: width 250ms var(--ease-out);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .header-nav a:hover { color: var(--color-brand); }
+      .header-nav a:hover::after { width: 100%; }
+    }
     .header-cta {
-      font-size: clamp(0.8125rem, 1.4vw, 0.95rem); font-weight: 600;
-      padding: 0.75rem 0.75rem;
-      margin-inline: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.5rem 0.75rem;
       border: 1.5px solid var(--color-brand);
-      border-radius: var(--radius-sm);
+      border-radius: 0.375rem;
+      transition: background 200ms var(--ease-out), color 200ms var(--ease-out);
     }
-
-    /* ===== MOBILE NAV ===== */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 0.35rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0.5rem;
-      z-index: 101;
+    @media (hover: hover) and (pointer: fine) {
+      .header-cta:hover { background: var(--color-brand); color: white; }
     }
-    .hamburger span {
-      display: block;
-      width: 1.5rem;
-      height: 2px;
-      background: var(--color-text);
-      border-radius: 1px;
-      transition: transform 300ms var(--ease-out), opacity 300ms var(--ease-out);
-    }
-    .hamburger.active span:nth-child(1) { transform: translateY(0.45rem) rotate(45deg); }
-    .hamburger.active span:nth-child(2) { opacity: 0; }
-    .hamburger.active span:nth-child(3) { transform: translateY(-0.45rem) rotate(-45deg); }
-    @media (max-width: 640px) {
-      .header-nav {
-        position: fixed; top: 0; right: 0;
-        flex-direction: column;
-        gap: 1rem;
-        width: min(75vw, 300px);
-        height: 100dvh;
-        padding: 5rem 2rem 2rem;
-        background: rgba(255,255,255,0.98);
-        border-left: 1px solid var(--color-border);
-        transform: translateX(100%);
-        transition: transform 300ms var(--ease-out);
-        z-index: 100;
-      }
-      .header-nav.open { transform: translateX(0); }
-      .header-nav a { font-size: 1rem; padding: 0.75rem 0; }
-      .hamburger { display: flex; }
-      .cta-section .btn-primary {
-        width: 100%;
-        justify-content: center;
-        padding-inline: 0.75rem;
-        overflow-wrap: anywhere;
-      }
-    }
+    .header-cta:active { transform: scale(0.97); }
 
     /* ===== HERO ===== */
     .hero {
       min-height: 100dvh;
       display: flex; align-items: center;
+      padding-top: 5rem;
       position: relative; overflow: hidden;
-      background: var(--ks-black);
     }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background-image: url('img/hero-visual.webp');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      opacity: 0.6;
-    }
-    .hero::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: var(--overlay-hero);
-    }
-    .hero .container { position: relative; z-index: 2; }
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -230,13 +170,13 @@
     }
     @media (max-width: 768px) {
       .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .hero::before { opacity: 0.3; }
     }
     .hero-tag {
       display: inline-flex; align-items: center; gap: 0.5rem;
-      font-size: 1.5rem; font-weight: 500;
-      color: var(--ks-gray-100);
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--color-muted);
       margin-bottom: 1.5rem;
+      opacity: 0; animation: fadeSlideIn 0.6s var(--ease-out) 0.2s forwards;
     }
     .hero-tag::before {
       content: '';
@@ -244,125 +184,170 @@
     }
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(2.25rem, 10vw, 4.5rem);
-      line-height: 1.1;
-      font-weight: 700;
-      color: var(--ks-white);
-      text-transform: uppercase;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.05;
+      font-style: italic;
+      opacity: 0; animation: fadeSlideIn 0.6s var(--ease-out) 0.3s forwards;
     }
-    .hero-title em { font-style: normal; color: var(--color-accent); }
+    .hero-title em { font-style: normal; color: var(--color-brand); }
     .hero-sub {
       font-size: clamp(1rem, 2vw, 1.2rem);
-      color: var(--ks-gray-100);
+      color: var(--color-muted);
       margin-top: 1.5rem;
       max-width: 32rem;
       line-height: 1.7;
+      opacity: 0; animation: fadeSlideIn 0.6s var(--ease-out) 0.4s forwards;
     }
-    .hero-actions { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; }
+    .hero-actions {
+      display: flex; gap: 1rem; margin-top: 2.5rem;
+      opacity: 0; animation: fadeSlideIn 0.6s var(--ease-out) 0.5s forwards;
+    }
     .btn-primary {
       display: inline-flex; align-items: center; gap: 0.5rem;
       padding: 0.875rem 2rem;
       background: var(--color-brand);
-      color: var(--ks-white);
+      color: white;
+      font-family: var(--font-body);
       font-weight: 600;
       font-size: 0.95rem;
-      border-radius: var(--radius-sm);
+      border: none; border-radius: 0.375rem;
       cursor: pointer;
+      transition: transform 150ms var(--ease-out), box-shadow 200ms var(--ease-out);
     }
+    .btn-primary:active { transform: scale(0.97); }
     .btn-secondary {
       display: inline-flex; align-items: center; gap: 0.5rem;
       padding: 0.875rem 2rem;
       background: transparent;
-      color: var(--ks-white);
+      color: var(--color-text);
+      font-family: var(--font-body);
       font-weight: 500;
       font-size: 0.95rem;
-      border: 1.5px solid var(--ks-gray-100);
-      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--color-border); border-radius: 0.375rem;
       cursor: pointer;
+      transition: border-color 200ms var(--ease-out), transform 150ms var(--ease-out);
     }
-    .hero-title em { transition: color 300ms var(--ease-out); }
-    .hero-title em:hover { color: var(--ks-mint-light); }
+    .btn-secondary:active { transform: scale(0.97); }
+    @media (hover: hover) and (pointer: fine) {
+      .btn-secondary:hover { border-color: var(--color-brand); }
+    }
+    .hero-visual {
+      display: flex; justify-content: center; align-items: center;
+      opacity: 0; animation: fadeSlideIn 0.8s var(--ease-out) 0.6s forwards;
+    }
+    .hero-cube {
+      width: clamp(200px, 20vw, 320px);
+      height: clamp(200px, 20vw, 320px);
+      background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-surface-alt) 100%);
+      border-radius: 2rem;
+      transform: rotate(15deg);
+      position: relative;
+      transition: transform 400ms var(--ease-out);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .hero-cube:hover { transform: rotate(5deg) scale(1.02); }
+    }
+    .hero-cube::after {
+      content: '✦';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: rgba(255,255,255,0.3);
+    }
 
     /* ===== SERVICES ===== */
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(1.5rem, 3vw, 2.5rem);
-      line-height: 1.2;
-      margin-bottom: 2rem;
-      max-width: 34rem;
-    }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      gap: 2rem;
     }
-    @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) {
+      .services-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
     .service-card {
-      background: var(--ks-white-off);
+      padding: 2.5rem 2rem;
       border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      padding: var(--space-card);
+      border-radius: 0.75rem;
+      background: white;
+      transition: transform 300ms var(--ease-out), box-shadow 300ms var(--ease-out);
     }
-    .service-card.featured { border-color: var(--color-brand); position: relative; }
+    @media (hover: hover) and (pointer: fine) {
+      .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+      }
+    }
+    .service-card.featured {
+      border-color: var(--color-brand);
+      position: relative;
+    }
     .service-card.featured::before {
       content: 'POPULAR';
-      position: absolute; top: -0.5rem; right: 1rem;
-      background: var(--ks-mint);
-      color: var(--ks-black);
-      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.05em;
-	      padding: 0.25rem 0.5rem; border-radius: var(--radius-sm);
+      position: absolute; top: -0.75rem; right: 1.5rem;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 0.25rem 0.75rem;
+      background: var(--color-accent);
+      color: white;
+      border-radius: 1rem;
     }
-    .service-icon { font-size: 1.5rem; display: block; margin-bottom: 1rem; }
+    .service-icon {
+      font-size: 2rem; margin-bottom: 1rem; display: block;
+    }
     .service-name {
       font-family: var(--font-display);
-      font-size: 1.125rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
     }
     .service-desc {
       font-size: 0.9rem;
       color: var(--color-muted);
-      line-height: 1.6;
+      line-height: 1.7;
       margin-bottom: 1.5rem;
     }
-    .service-price { font-size: 0.9rem; }
-    .service-price .strikethrough { text-decoration: line-through; color: var(--color-muted); }
-    .service-price strong { font-size: 1.1rem; }
-    .service-price small { font-size: 0.75rem; color: var(--color-muted); }
+    .service-price {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
+    .service-price small {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--color-muted);
+      font-weight: 400;
+    }
 
     /* ===== PROJECTS ===== */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
     }
-    @media (max-width: 768px) { .projects-grid { grid-template-columns: 1fr; } }
-    .project-image {
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      border-radius: var(--radius-md);
-      margin-bottom: 1rem;
+    @media (max-width: 768px) {
+      .projects-grid { grid-template-columns: 1fr; }
     }
-    .project-placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--ks-black-soft);
-      color: var(--ks-gray-100);
-      border: 1px solid var(--ks-gray-700);
-      font-weight: 700;
-      font-size: clamp(1.125rem, 3vw, 1.5rem);
-      letter-spacing: 0.08em;
+    .project-card {
+      padding: 2rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 0.75rem;
+      transition: transform 300ms var(--ease-out);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .project-card:hover { transform: translateY(-3px); }
     }
     .project-name {
       font-family: var(--font-display);
       font-size: 1.25rem;
-      font-weight: 700;
+      font-style: italic;
       margin-bottom: 0.75rem;
     }
     .project-desc {
-      font-size: 0.9rem;
-      color: var(--color-muted);
+      font-size: 0.875rem;
+      opacity: 0.7;
       line-height: 1.6;
     }
 
@@ -371,346 +356,209 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
-      align-items: center;
+      align-items: start;
     }
-    @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
-    .about-visual { border-radius: var(--radius-md); }
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    .about-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .about-image {
+      border-radius: 1rem;
+      overflow: hidden;
+      background: var(--color-surface-alt);
+    }
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      transition: transform 400ms var(--ease-out);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .about-image:hover img { transform: scale(1.02); }
+    }
     .about-text h2 {
       font-family: var(--font-display);
-      font-size: clamp(1.5rem, 3vw, 2.5rem);
-      line-height: 1.2;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
       margin-bottom: 1.5rem;
     }
     .about-text p {
-      font-size: clamp(0.9rem, 1.5vw, 1rem);
-      color: var(--color-muted);
+      font-size: 1rem;
+      line-height: 1.8;
       margin-bottom: 1rem;
-      line-height: 1.7;
     }
+    .about-text p:last-child { margin-bottom: 0; }
     .about-logos {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-top: 2rem;
+      display: flex; flex-direction: column; gap: 1.5rem;
     }
     .about-logo-item {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1.25rem;
+      border: 1px solid var(--color-border);
+      border-radius: 0.5rem;
+      background: white;
+      transition: transform 200ms var(--ease-out);
     }
-    .about-logo-icon { font-size: 1.25rem; color: var(--color-accent); font-weight: 700; }
-    .about-logo-name { font-weight: 600; font-size: 0.875rem; }
-    .about-logo-role { font-size: 0.75rem; color: var(--color-muted); }
+    @media (hover: hover) and (pointer: fine) {
+      .about-logo-item:hover { transform: translateX(4px); }
+    }
+    .about-logo-icon {
+      font-size: 1.5rem; flex-shrink: 0;
+    }
+    .about-logo-name {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+    }
+    .about-logo-role {
+      font-size: 0.8rem;
+      color: var(--color-muted);
+    }
 
     /* ===== CTA ===== */
-    .cta-section { text-align: center; max-width: 600px; margin: 0 auto; }
+    .cta-section {
+      text-align: center;
+      padding: clamp(4rem, 8vw, 6rem) 0;
+    }
     .cta-title {
       font-family: var(--font-display);
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
-      line-height: 1.2;
-      margin-bottom: 1.5rem;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 1rem;
     }
     .cta-sub {
-      font-size: clamp(0.9rem, 1.5vw, 1rem);
+      font-size: 1.1rem;
       color: var(--color-muted);
-      margin-bottom: 2rem;
-      line-height: 1.7;
+      max-width: 32rem;
+      margin: 0 auto 2.5rem;
     }
 
     /* ===== FOOTER ===== */
-    .footer { padding: 2rem 0; }
+    .footer {
+      padding: 3rem 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
     .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.8rem;
-      color: var(--color-muted);
-      flex-wrap: wrap;
-      gap: 0.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    @media (max-width: 640px) {
+      .footer-inner { flex-direction: column; gap: 0.5rem; text-align: center; }
     }
 
-    /* ===== REVEAL ANIMATION ===== */
-    .reveal {
-      opacity: 1;
-      transform: none;
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    .js-enabled .reveal {
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .reveal {
       opacity: 0;
       transform: translateY(24px);
       transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
     }
-    .js-enabled .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    /* ===== HERO STAGGER ANIMATION ===== */
-    @media (prefers-reduced-motion: no-preference) {
-      .hero-tag,
-      .hero-title,
-      .hero-sub,
-      .hero-actions {
-        opacity: 0;
-        transform: translateY(24px);
-      }
-      .js-enabled .hero-loaded .hero-tag {
-        animation: fadeSlideIn 700ms var(--ease-out) forwards;
-        animation-delay: 200ms;
-      }
-      .js-enabled .hero-loaded .hero-title {
-        animation: fadeSlideIn 700ms var(--ease-out) forwards;
-        animation-delay: 350ms;
-      }
-      .js-enabled .hero-loaded .hero-sub {
-        animation: fadeSlideIn 700ms var(--ease-out) forwards;
-        animation-delay: 500ms;
-      }
-      .js-enabled .hero-loaded .hero-actions {
-        animation: fadeSlideIn 700ms var(--ease-out) forwards;
-        animation-delay: 650ms;
-      }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    /* ===== SECTION ENTRANCE ANIMATION ===== */
-    @media (prefers-reduced-motion: no-preference) {
-      .section-reveal {
-        opacity: 0;
-        transform: translateY(32px);
-        transition: opacity 800ms var(--ease-out), transform 800ms var(--ease-out);
-      }
-      .js-enabled .section-reveal.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeSlideIn {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ===== PROJECT CARD HOVER ENHANCED ===== */
-    .project-card {
-      transition: transform 250ms var(--ease-out);
-    }
-    .project-card:hover {
-      transform: translateY(-6px);
-    }
-    .project-card .project-image,
-    .project-card .project-placeholder {
-      transition: transform 300ms var(--ease-out);
-    }
-    .project-card:hover .project-image,
-    .project-card:hover .project-placeholder {
-      transform: scale(1.02);
-    }
-
-    /* ===== BUTTON ANIMATIONS ===== */
-    .btn-primary,
-    .btn-secondary,
-    .header-cta {
-      transition: transform 160ms var(--ease-out), background-color 200ms var(--ease-out), border-color 200ms var(--ease-out), color 200ms var(--ease-out);
-    }
-    .btn-primary:active,
-    .btn-secondary:active,
-    .header-cta:active {
-      transform: scale(0.97);
-    }
-    .btn-primary:hover { background: var(--color-brand-hover); }
-    .btn-secondary:hover { background: rgba(255,255,255,0.08); }
-    .header-cta:hover { background: var(--ks-gray-50); }
-
-    /* ===== SERVICE CARD HOVER ENHANCED ===== */
-    .service-card {
-      transition: transform 250ms var(--ease-out), border-color 250ms var(--ease-out);
-    }
-    .service-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--ks-black);
-    }
-
+    /* ===== REDUCED MOTION ===== */
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
       }
-      .reveal,
-      .section-reveal {
-        opacity: 1;
-        transform: none;
-      }
-      .hero-tag,
-      .hero-title,
-      .hero-sub,
-      .hero-actions {
-        opacity: 1;
-        transform: none;
-      }
+      .hero-cube { transform: none; }
+      .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
-
 <body>
-  <a href="#main" class="skip-link">Saltar al contenido</a>
   <!-- HEADER -->
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="#" class="header-logo">KIOSHI SHIMABUKU</a>
-      <nav class="header-nav" id="header-nav" aria-label="Navegación principal">
-        <a href="#servicios" class="nav-link">Servicios</a>
-        <a href="#llamicornios" class="nav-link">Llamicornios</a>
-        <a href="#proyectos" class="nav-link">Socios</a>
-        <a href="#toys-wear" class="nav-link">Moda</a>
-        <a href="#minecraft" class="nav-link">Tech</a>
-        <a href="#about" class="nav-link">Sobre mí</a>
-        <a href="#contacto" class="header-cta nav-link">Conversemos</a>
+      <a href="#" class="header-logo">Kioshi Shimabuku</a>
+      <nav class="header-nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#about">Sobre mí</a>
+        <a href="#contacto" class="header-cta">Conversemos</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false" aria-controls="header-nav">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
-  <main id="main">
   <!-- HERO -->
-  <section class="hero" aria-label="Hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div>
-          <div class="hero-tag">Lima, Perú</div>
-          <h1 class="hero-title">Diseño con identidad y propósito.</h1>
-          <p class="hero-sub">
-            Soy Kioshi Shimabuku — peruano con raíces chinas y japonesas. 
-            Diseño a través de mi identidad, fusionando cultura e iconografía peruana 
-            con estética pop japonesa. Un lenguaje transversal, moderno y ancestral.
-          </p>
-          <div class="hero-actions">
-            <a href="#servicios" class="btn-primary">Ver servicios →</a>
-            <a href="#proyectos" class="btn-secondary">Ver proyectos</a>
-          </div>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-tag">Estrategia Visual · Lima, Perú</div>
+        <h1 class="hero-title">
+          Diseño que<em> trasciende</em> lo esperado
+        </h1>
+        <p class="hero-sub">
+          Identidad, sistemas digitales y dirección creativa para marcas que buscan 
+          impactar la cultura peruana a través del diseño con propósito.
+        </p>
+        <div class="hero-actions">
+          <a href="#contacto" class="btn-primary">Trabajemos juntos →</a>
+          <a href="#proyectos" class="btn-secondary">Ver proyectos</a>
         </div>
-        <div></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-cube"></div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICIOS -->
-  <section id="servicios" class="section section-reveal">
+  <!-- SERVICES -->
+  <section id="servicios" class="section">
     <div class="container">
       <span class="label">Servicios</span>
-      <h2 class="section-title">Soluciones que escalan<br>con tu visión</h2>
       <div class="services-grid">
         <div class="service-card reveal">
-          <span class="service-icon">◆</span>
-          <h3 class="service-name">Estrategia Visual</h3>
-          <p class="service-desc">Dirección creativa y estratégica para marcas que buscan posicionarse con intención. Identidad visual, sistemas de diseño y narrativa de marca.</p>
+          <span class="service-icon">🖥️</span>
+          <h3 class="service-name">Página Simple</h3>
+          <p class="service-desc">Para creativos, pequeños negocios y profesionales que necesitan presencia digital rápida. Landing page estratégica con dirección de arte y copy alineado a tu marca. Entrega: 1 semana.</p>
+          <div class="service-price"><span style="text-decoration:line-through;opacity:0.5;">S/700</span> <strong>S/350</strong> <small>único</small></div>
+        </div>
+        <div class="service-card featured reveal">
+          <span class="service-icon">⚡</span>
+          <h3 class="service-name">Sistema Web</h3>
+          <p class="service-desc">Sitio web completo con arquitectura de información, sistema visual coherente, formularios inteligentes y SEO on-page. Para marcas establecidas que necesitan estructura digital sólida. Entrega: 2-3 semanas.</p>
+          <div class="service-price"><span style="text-decoration:line-through;opacity:0.5;">S/1,500</span> <strong>S/700</strong> <small>único</small></div>
         </div>
         <div class="service-card reveal">
-          <span class="service-icon">●</span>
-          <h3 class="service-name">Sistemas Creativos IA</h3>
-          <p class="service-desc">Integración de herramientas de IA en flujos creativos y productivos. Automatización, generación de contenido y sistemas inteligentes para equipos creativos.</p>
-        </div>
-        <div class="service-card reveal">
-          <span class="service-icon">■</span>
-          <h3 class="service-name">Fabricación Digital</h3>
-          <p class="service-desc">Prototipado, modelado 3D y producción con tecnologías de fabricación digital. Del concepto al objeto físico con precisión y estética.</p>
+          <span class="service-icon">🌐</span>
+          <h3 class="service-name">Ecosistema Digital</h3>
+          <p class="service-desc">Dirección creativa completa liderada por Kioshi + sistema web + automatizaciones + brand guidelines digitales. Para empresas que necesitan un ecosistema digital integral.</p>
+          <div class="service-price"><strong>Desde S/2,500</strong> <small>— cotizar según alcance</small></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- LLAMICORNIOS -->
-  <section id="llamicornios" class="section section-alt section-reveal">
+  <!-- PROJECTS -->
+  <section id="proyectos" class="section section-alt">
     <div class="container">
-      <span class="label">Llamicornios</span>
-      <h2 class="section-title">Dos íconos culturales:<br>la llama andina + el unicornio pop</h2>
-      <div class="about-grid">
-        <div>
-          <p class="project-desc">Los Llamicornios son un personaje fácil de interpretar para grandes y chicos. Fusionan la cultura andina (llama) con la cultura pop (unicornio), creando un lenguaje transversal, moderno y ancestral.</p>
-        </div>
-        <div>
-          <p class="project-desc">He colaborado con marcas como Adidas, Incakola, Samsung, Victorinox, Amarás y Jockey Plaza. Uno de mis logros más grandes fue hacer que Jason Momoa use mi Chullamicornio en la premiere de Minecraft en México.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOCIOS ESTRATÉGICOS -->
-  <section id="proyectos" class="section section-reveal">
-    <div class="container">
-      <span class="label">Socios Estratégicos</span>
-      <h2 class="section-title">Alianzas que<br>multiplican impacto</h2>
+      <span class="label">Proyectos</span>
       <div class="projects-grid">
         <div class="project-card reveal">
-          <img src="img/metalmorfosis.webp" alt="Metalmorfosis" class="project-image" loading="lazy" width="1024" height="768">
           <h3 class="project-name">Metalmorfosis</h3>
-          <p class="project-desc">Editorial de pines con identidad cultural peruana. Colecciones limitadas que reimaginan símbolos nacionales con estética contemporánea. Co-fundado con Jotaconpe.</p>
+          <p class="project-desc">Colecciones limitadas que reimaginan símbolos nacionales con estética contemporánea. Co-fundado con Jotaconpe. Cada pin es una pieza de conversación sobre la peruanidad.</p>
         </div>
         <div class="project-card reveal">
-          <img src="img/libretacticas.webp" alt="Libretácticas" class="project-image" loading="lazy" width="1536" height="1024">
           <h3 class="project-name">Libretácticas</h3>
-          <p class="project-desc">Sistema de captura de ideas para mentes que no se detienen. Libreta táctica de cintura con apertura one-hand, cierre magnético y lapicero integrado. Co-fundado con Benja.</p>
+          <p class="project-desc">Sistema de captura de ideas para mentes que no se detienen. Libreta táctica de cintura con apertura one-hand, cierre magnético y lapicero integrado. Founders Edition seriada.</p>
         </div>
         <div class="project-card reveal">
-          <img src="img/qntm.webp" alt="QNTM - Marca de moda conceptual" class="project-image" loading="lazy" width="1024" height="1024">
-          <h3 class="project-name">QNTM</h3>
-          <p class="project-desc">Marca de moda conceptual que explora la intersección entre identidad peruana y estética futurista. Diseño de prendas, sistemas visuales y narrativa de marca. Co-fundado con Geronimo Campos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TOYS & WEAR -->
-  <section id="toys-wear" class="section section-alt section-reveal">
-    <div class="container">
-      <span class="label">Proyectos Moda · Toys & Wear</span>
-      <h2 class="section-title">Moda + objeto,<br>con identidad propia</h2>
-      <div class="projects-grid">
-        <div class="project-card reveal">
-          <img src="img/chullamicornio.webp" alt="Chullamicornio - Prenda conceptual" class="project-image" loading="lazy" width="1024" height="1024">
-          <h3 class="project-name">Chullamicornio</h3>
-          <p class="project-desc">Prenda conceptual que fusiona la tradición andina con estética contemporánea. Experimentación textil y narrativa de identidad cultural.</p>
-        </div>
-        <div class="project-card reveal">
-          <img src="img/cartera-chacana.webp" alt="Cartera Chacana - Accesorio funcional" class="project-image" loading="lazy" width="1024" height="1024">
-          <h3 class="project-name">Cartera Chacana</h3>
-          <p class="project-desc">Accesorio funcional con símbolos de identidad peruana. Diseño de producto que conecta lo utilitario con lo simbólico.</p>
-        </div>
-        <div class="project-card reveal">
-          <img src="img/fosforos-llamicornios.webp" alt="Fósforos Llamicornios - Objeto de diseño" class="project-image" loading="lazy" width="1024" height="1024">
-          <h3 class="project-name">Fósforos Llamicornios</h3>
-          <p class="project-desc">Objeto de diseño que transforma lo cotidiano en pieza de conversación. Packaging, identidad y producción de serie limitada.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCIAS EN MINECRAFT -->
-  <section id="minecraft" class="section section-reveal">
-    <div class="container">
-      <span class="label">Proyectos Tech · Experiencias en Minecraft</span>
-      <h2 class="section-title">Mundos digitales,<br>cultura tangible</h2>
-      <div class="projects-grid">
-        <div class="project-card reveal">
-          <div class="project-image project-placeholder">LINK</div>
-          <h3 class="project-name">Link Island</h3>
-          <p class="project-desc">Isla experiencial en Minecraft con arquitectura conceptual, espacios interactivos y narrativa inmersiva. Un mundo construido con intención.</p>
-        </div>
-        <div class="project-card reveal">
-          <div class="project-image project-placeholder">MOT</div>
-          <h3 class="project-name">Museo Motelo</h3>
-          <p class="project-desc">Museo virtual que exhibe artefactos digitales y narrativas culturales. Espacio de memoria colectiva construido en bloques.</p>
-        </div>
-        <div class="project-card reveal">
-          <div class="project-image project-placeholder">SUB</div>
-          <h3 class="project-name">Museo Submarino</h3>
-          <p class="project-desc">Experiencia subacuática de exploración cultural. Arquitectura orgánica y ambientes inmersivos que cuentan historias desde las profundidades.</p>
-        </div>
-        <div class="project-card reveal">
-          <div class="project-image project-placeholder">ANT</div>
-          <h3 class="project-name">Perú en la Antártida</h3>
-          <p class="project-desc">Representación digital de la presencia peruana en el continente blanco. Historia, ciencia y soberanía en formato experiencial.</p>
-        </div>
-        <div class="project-card reveal">
-          <img src="img/llami-claw.webp" alt="Llami Claw" class="project-image" loading="lazy" width="1122" height="1402">
           <h3 class="project-name">Llami Claw</h3>
           <p class="project-desc">Asistente AI autónoma con voz, memoria y criterio. Más de 40 skills especializadas instaladas. Una socia creativa entrenada para trabajar, no una herramienta.</p>
         </div>
@@ -719,50 +567,45 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section section-alt section-reveal">
+  <section id="about" class="section">
     <div class="container about-grid">
-      <div>
-        <img src="img/kioshi-llamicornio.jpg" alt="Kioshi Shimabuku" class="about-visual" loading="lazy" width="1024" height="1536">
-      </div>
       <div class="about-text">
         <span class="label">Sobre mí</span>
-        <h2>Diseñador gráfico,<br>diseñador de juguetes,<br>gestor cultural digital</h2>
+        <h2>Diseñador,<br>educador,<br>creador de sistemas</h2>
         <p>
-          Soy Kioshi Shimabuku, peruano con raíces chinas y japonesas. Diseñador gráfico de profesión,
-          diseñador de juguetes, gestor cultural digital en Minecraft, bailarín de locking y creador
-          de los Llamicornios.
+          Estratega visual, director creativo y educador peruano. Desde mi casa-taller 
+          <strong>Llamicornios Funky Paradas</strong> en Jesús María, Lima, desarrollo 
+          proyectos que cruzan moda, tecnología e identidad cultural.
         </p>
         <p>
-          He colaborado con marcas como <strong>Adidas</strong> (decoré su tienda principal de Perú con Llamicornios),
-          <strong>Incakola</strong> (imagen de marca), <strong>Samsung</strong>, <strong>Victorinox</strong>,
-          <strong>Amarás</strong>, <strong>Jockey Plaza</strong> y <strong>C.C. Peruano Japonés</strong>.
+          Docente en <strong>Chio Lecca</strong> (Diseño Digital en Joyería) y <strong>SISE</strong> 
+          (Illustrator para Diseño de Interiores). Creador de Metalmorfosis, Libretácticas y Llami Claw.
         </p>
         <p>
-          Director de <strong>Link Island</strong>, centro cultural virtual en Minecraft. Voluntario en
-          <strong>TEDxTukuy</strong> desde 2012. Creador de <strong>Déjame que te Cuento</strong>,
-          laboratorio de exploración artística para pequeños autores.
+          Mi propósito: impactar positivamente en la cultura peruana a través de la creatividad.
         </p>
-        <p>
-          Desde mi taller <strong>Llamicornios Funky Paradise</strong> en Jesús María, Lima, desarrollo
-          proyectos que cruzan moda, tecnología e identidad cultural bajo el alter ego de <strong>Llamicornios</strong>.
-        </p>
+      </div>
+      <div class="about-visual">
+        <div class="about-image reveal">
+          <img src="images/kioshi-llamicornio.jpg" alt="Kioshi Shimabuku" loading="lazy" />
+        </div>
         <div class="about-logos">
           <div class="about-logo-item reveal">
-            <span class="about-logo-icon">◆</span>
+            <span class="about-logo-icon">🎨</span>
             <div>
               <div class="about-logo-name">Chio Lecca</div>
               <div class="about-logo-role">Docente · Diseño Digital Joyería</div>
             </div>
           </div>
           <div class="about-logo-item reveal">
-            <span class="about-logo-icon">●</span>
+            <span class="about-logo-icon">📐</span>
             <div>
               <div class="about-logo-name">SISE</div>
               <div class="about-logo-role">Docente · Illustrator Diseño de Interiores</div>
             </div>
           </div>
           <div class="about-logo-item reveal">
-            <span class="about-logo-icon">■</span>
+            <span class="about-logo-icon">🏛️</span>
             <div>
               <div class="about-logo-name">Universidad del Pacífico</div>
               <div class="about-logo-role">Profesor · IA Aplicada a Moda</div>
@@ -774,22 +617,19 @@
   </section>
 
   <!-- CTA -->
-  <section id="contacto" class="section section-reveal">
+  <section id="contacto" class="section section-alt">
     <div class="container cta-section">
-      <h2 class="cta-title">¿Listo para crear algo<br>que realmente importe para el Perú?</h2>
+      <h2 class="cta-title">¿Listo para crear algo<br>que realmente importe?</h2>
       <p class="cta-sub">
         Cada proyecto empieza con una conversación. Hablemos de tu marca, tu idea 
         o ese proyecto que llevas tiempo queriendo materializar.
       </p>
-      <a href="http://wa.me/+51992670102" class="btn-primary">Escríbeme por WhatsApp →</a>
-      <p style="margin-top: 1rem; color: var(--color-muted); font-size: 0.9rem;">
-        kioshishimabuku@gmail.com<br>
-        +51 992 670 102
-      </p>
+      <a href="mailto:kioshishimabuku@gmail.com" class="btn-primary">
+        kioshishimabuku@gmail.com →
+      </a>
     </div>
   </section>
 
-  </main>
   <!-- FOOTER -->
   <footer class="section-alt">
     <div class="container footer">
@@ -800,77 +640,32 @@
     </div>
   </footer>
 
+  <!-- REVEAL ON SCROLL -->
   <script>
-    document.body.classList.add('js-enabled');
-
-    // Hero loaded state for stagger animation
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => {
-        setTimeout(() => document.body.classList.add('hero-loaded'), 50);
-      });
-    } else {
-      setTimeout(() => document.body.classList.add('hero-loaded'), 50);
-    }
-
-    // Hamburger menu
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('header-nav');
-    if (hamburger && nav) {
-      const syncMobileNavInert = () => {
-        nav.inert = window.matchMedia('(max-width: 640px)').matches && !nav.classList.contains('open');
-      };
-      syncMobileNavInert();
-      window.addEventListener('resize', syncMobileNavInert);
-      hamburger.addEventListener('click', () => {
-        const isOpen = nav.classList.toggle('open');
-        hamburger.classList.toggle('active');
-        hamburger.setAttribute('aria-expanded', isOpen);
-        nav.inert = !isOpen;
-      });
-      document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          nav.classList.remove('open');
-          hamburger.classList.remove('active');
-          hamburger.setAttribute('aria-expanded', 'false');
-          syncMobileNavInert();
-        });
-      });
-    }
-
-    // Header scroll effect
-    const header = document.getElementById('header');
-    let lastScrollY = window.scrollY;
-    let ticking = false;
-
-    function updateHeader() {
-      const scrollY = window.scrollY;
-      if (scrollY > 10) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-      lastScrollY = scrollY;
-      ticking = false;
-    }
-
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateHeader);
-        ticking = true;
-      }
-    }, { passive: true });
-
-    // IntersectionObserver for reveal animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    document.querySelectorAll('.reveal, .section-reveal').forEach(el => observer.observe(el));
+    // Header scroll effect
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      const header = document.getElementById('header');
+      
+      if (currentScroll > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      
+      lastScroll = currentScroll;
+    }, { passive: true });
   </script>
 </body>
 </html>
