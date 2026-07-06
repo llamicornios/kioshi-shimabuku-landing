@@ -128,14 +128,19 @@
     .section-alt .about-logo-role,
     .section-alt .footer-inner { color: var(--color-muted-inverse); }
 
-    /* ===== HEADER ===== */
+    /* ===== HEADER SCROLL EFFECT ===== */
     .header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 1rem 0;
       background: rgba(255,255,255,0.95);
-      border-bottom: 1px solid var(--color-border);
+      border-bottom: 1px solid transparent;
+      transition: background-color 300ms var(--ease-out), border-color 300ms var(--ease-out), box-shadow 300ms var(--ease-out);
     }
-    .header.scrolled { box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .header.scrolled {
+      background: rgba(255,255,255,0.98);
+      border-bottom-color: var(--color-border);
+      box-shadow: 0 1px 12px rgba(0,0,0,0.08);
+    }
     .header-inner { display: flex; align-items: center; justify-content: space-between; }
     .header-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; }
     .header-nav { display: flex; gap: clamp(0.75rem, 1.6vw, 1.5rem); align-items: center; }
@@ -275,8 +280,6 @@
       border-radius: var(--radius-sm);
       cursor: pointer;
     }
-    .btn-primary:hover { background: var(--color-brand-hover); }
-    .btn-secondary:hover { background: rgba(255,255,255,0.08); }
     .hero-title em { transition: color 300ms var(--ease-out); }
     .hero-title em:hover { color: var(--ks-mint-light); }
 
@@ -299,9 +302,7 @@
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
       padding: var(--space-card);
-      transition: transform 200ms var(--ease-out), border-color 200ms var(--ease-out);
     }
-    .service-card:hover { transform: translateY(-2px); border-color: var(--ks-black); }
     .service-card.featured { border-color: var(--color-brand); position: relative; }
     .service-card.featured::before {
       content: 'POPULAR';
@@ -336,8 +337,6 @@
       gap: 2rem;
     }
     @media (max-width: 768px) { .projects-grid { grid-template-columns: 1fr; } }
-    .project-card { transition: transform 200ms var(--ease-out); }
-    .project-card:hover { transform: translateY(-4px); }
     .project-image {
       aspect-ratio: 4 / 3;
       object-fit: cover;
@@ -437,32 +436,111 @@
     }
     .js-enabled .reveal {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(24px);
       transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
     }
     .js-enabled .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ===== SCROLL-DRIVEN ANIMATION (hero) ===== */
+    /* ===== HERO STAGGER ANIMATION ===== */
     @media (prefers-reduced-motion: no-preference) {
-      @supports (animation-timeline: scroll()) {
-        .hero-title, .hero-sub, .hero-actions {
-          animation: fadeSlideIn 1s var(--ease-out) both;
-          animation-timeline: view();
-          animation-range: entry 0% entry 40%;
-        }
+      .hero-tag,
+      .hero-title,
+      .hero-sub,
+      .hero-actions {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      .js-enabled .hero-loaded .hero-tag {
+        animation: fadeSlideIn 700ms var(--ease-out) forwards;
+        animation-delay: 200ms;
+      }
+      .js-enabled .hero-loaded .hero-title {
+        animation: fadeSlideIn 700ms var(--ease-out) forwards;
+        animation-delay: 350ms;
+      }
+      .js-enabled .hero-loaded .hero-sub {
+        animation: fadeSlideIn 700ms var(--ease-out) forwards;
+        animation-delay: 500ms;
+      }
+      .js-enabled .hero-loaded .hero-actions {
+        animation: fadeSlideIn 700ms var(--ease-out) forwards;
+        animation-delay: 650ms;
       }
     }
+
+    /* ===== SECTION ENTRANCE ANIMATION ===== */
+    @media (prefers-reduced-motion: no-preference) {
+      .section-reveal {
+        opacity: 0;
+        transform: translateY(32px);
+        transition: opacity 800ms var(--ease-out), transform 800ms var(--ease-out);
+      }
+      .js-enabled .section-reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     @keyframes fadeSlideIn {
       from { opacity: 0; transform: translateY(24px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* ===== PROJECT CARD HOVER ENHANCED ===== */
+    .project-card {
+      transition: transform 250ms var(--ease-out);
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+    }
+    .project-card .project-image,
+    .project-card .project-placeholder {
+      transition: transform 300ms var(--ease-out);
+    }
+    .project-card:hover .project-image,
+    .project-card:hover .project-placeholder {
+      transform: scale(1.02);
+    }
+
+    /* ===== BUTTON ANIMATIONS ===== */
+    .btn-primary,
+    .btn-secondary,
+    .header-cta {
+      transition: transform 160ms var(--ease-out), background-color 200ms var(--ease-out), border-color 200ms var(--ease-out), color 200ms var(--ease-out);
+    }
+    .btn-primary:active,
+    .btn-secondary:active,
+    .header-cta:active {
+      transform: scale(0.97);
+    }
+    .btn-primary:hover { background: var(--color-brand-hover); }
+    .btn-secondary:hover { background: rgba(255,255,255,0.08); }
+    .header-cta:hover { background: var(--ks-gray-50); }
+
+    /* ===== SERVICE CARD HOVER ENHANCED ===== */
+    .service-card {
+      transition: transform 250ms var(--ease-out), border-color 250ms var(--ease-out);
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--ks-black);
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
       }
-      .reveal {
+      .reveal,
+      .section-reveal {
+        opacity: 1;
+        transform: none;
+      }
+      .hero-tag,
+      .hero-title,
+      .hero-sub,
+      .hero-actions {
         opacity: 1;
         transform: none;
       }
@@ -515,7 +593,7 @@
   </section>
 
   <!-- SERVICIOS -->
-  <section id="servicios" class="section">
+  <section id="servicios" class="section section-reveal">
     <div class="container">
       <span class="label">Servicios</span>
       <h2 class="section-title">Soluciones que escalan<br>con tu visión</h2>
@@ -540,7 +618,7 @@
   </section>
 
   <!-- LLAMICORNIOS -->
-  <section id="llamicornios" class="section section-alt">
+  <section id="llamicornios" class="section section-alt section-reveal">
     <div class="container">
       <span class="label">Llamicornios</span>
       <h2 class="section-title">Dos íconos culturales:<br>la llama andina + el unicornio pop</h2>
@@ -556,7 +634,7 @@
   </section>
 
   <!-- SOCIOS ESTRATÉGICOS -->
-  <section id="proyectos" class="section">
+  <section id="proyectos" class="section section-reveal">
     <div class="container">
       <span class="label">Socios Estratégicos</span>
       <h2 class="section-title">Alianzas que<br>multiplican impacto</h2>
@@ -572,7 +650,7 @@
           <p class="project-desc">Sistema de captura de ideas para mentes que no se detienen. Libreta táctica de cintura con apertura one-hand, cierre magnético y lapicero integrado. Co-fundado con Benja.</p>
         </div>
         <div class="project-card reveal">
-          <div class="project-image project-placeholder">QNTM</div>
+          <img src="img/qntm.webp" alt="QNTM - Marca de moda conceptual" class="project-image" loading="lazy" width="1024" height="1024">
           <h3 class="project-name">QNTM</h3>
           <p class="project-desc">Marca de moda conceptual que explora la intersección entre identidad peruana y estética futurista. Diseño de prendas, sistemas visuales y narrativa de marca. Co-fundado con Geronimo Campos.</p>
         </div>
@@ -581,23 +659,23 @@
   </section>
 
   <!-- TOYS & WEAR -->
-  <section id="toys-wear" class="section section-alt">
+  <section id="toys-wear" class="section section-alt section-reveal">
     <div class="container">
       <span class="label">Proyectos Moda · Toys & Wear</span>
       <h2 class="section-title">Moda + objeto,<br>con identidad propia</h2>
       <div class="projects-grid">
         <div class="project-card reveal">
-          <div class="project-image project-placeholder">CHU</div>
+          <img src="img/chullamicornio.webp" alt="Chullamicornio - Prenda conceptual" class="project-image" loading="lazy" width="1024" height="1024">
           <h3 class="project-name">Chullamicornio</h3>
           <p class="project-desc">Prenda conceptual que fusiona la tradición andina con estética contemporánea. Experimentación textil y narrativa de identidad cultural.</p>
         </div>
         <div class="project-card reveal">
-          <div class="project-image project-placeholder">CHA</div>
+          <img src="img/cartera-chacana.webp" alt="Cartera Chacana - Accesorio funcional" class="project-image" loading="lazy" width="1024" height="1024">
           <h3 class="project-name">Cartera Chacana</h3>
           <p class="project-desc">Accesorio funcional con símbolos de identidad peruana. Diseño de producto que conecta lo utilitario con lo simbólico.</p>
         </div>
         <div class="project-card reveal">
-          <div class="project-image project-placeholder">FOS</div>
+          <img src="img/fosforos-llamicornios.webp" alt="Fósforos Llamicornios - Objeto de diseño" class="project-image" loading="lazy" width="1024" height="1024">
           <h3 class="project-name">Fósforos Llamicornios</h3>
           <p class="project-desc">Objeto de diseño que transforma lo cotidiano en pieza de conversación. Packaging, identidad y producción de serie limitada.</p>
         </div>
@@ -606,7 +684,7 @@
   </section>
 
   <!-- EXPERIENCIAS EN MINECRAFT -->
-  <section id="minecraft" class="section">
+  <section id="minecraft" class="section section-reveal">
     <div class="container">
       <span class="label">Proyectos Tech · Experiencias en Minecraft</span>
       <h2 class="section-title">Mundos digitales,<br>cultura tangible</h2>
@@ -641,7 +719,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section section-alt">
+  <section id="about" class="section section-alt section-reveal">
     <div class="container about-grid">
       <div>
         <img src="img/kioshi-profile.webp" alt="Kioshi Shimabuku" class="about-visual" loading="lazy" width="1024" height="1536">
@@ -696,9 +774,9 @@
   </section>
 
   <!-- CTA -->
-  <section id="contacto" class="section">
+  <section id="contacto" class="section section-reveal">
     <div class="container cta-section">
-      <h2 class="cta-title">¿Listo para crear algo<br>que realmente importe?</h2>
+      <h2 class="cta-title">¿Listo para crear algo<br>que realmente importe para el Perú?</h2>
       <p class="cta-sub">
         Cada proyecto empieza con una conversación. Hablemos de tu marca, tu idea 
         o ese proyecto que llevas tiempo queriendo materializar.
@@ -725,6 +803,15 @@
   <script>
     document.body.classList.add('js-enabled');
 
+    // Hero loaded state for stagger animation
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => document.body.classList.add('hero-loaded'), 50);
+      });
+    } else {
+      setTimeout(() => document.body.classList.add('hero-loaded'), 50);
+    }
+
     // Hamburger menu
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('header-nav');
@@ -750,12 +837,40 @@
       });
     }
 
+    // Header scroll effect
+    const header = document.getElementById('header');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    function updateHeader() {
+      const scrollY = window.scrollY;
+      if (scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      lastScrollY = scrollY;
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // IntersectionObserver for reveal animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
       });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.reveal, .section-reveal').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
