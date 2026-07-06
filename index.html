@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kioshi Shimabuku — Estrategia Visual, Identidad y Sistemas Digitales</title>
+  <title>KIOSHI SHIMABUKU — Estrategia Visual, Identidad y Sistemas Digitales</title>
   <meta name="description" content="Estrategia visual, identidad de marca, sistemas digitales y dirección creativa para marcas que buscan destacar. Basado en Lima, Perú.">
-  <meta property="og:title" content="Kioshi Shimabuku — Estrategia Visual">
+  <meta property="og:title" content="KIOSHI SHIMABUKU — Estrategia Visual">
   <meta property="og:description" content="Identidad, sistemas digitales y dirección creativa para marcas que buscan destacar.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://beautiful-cocada-9c9012.netlify.app/img/hero-visual.webp">
+  <meta property="og:image" content="https://voluble-queijadas-7b35c6.netlify.app/img/hero-visual.webp">
   <meta property="og:image:width" content="1774">
   <meta property="og:image:height" content="887">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://beautiful-cocada-9c9012.netlify.app/img/hero-visual.webp">
+  <meta name="twitter:image" content="https://voluble-queijadas-7b35c6.netlify.app/img/hero-visual.webp">
   
-  <!-- JSON-LD Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,35 +39,24 @@
   }
   </script>
   
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   
   <style>
-    /* ===== BRAND TOKENS (@theme) ===== */
     :root {
-      /* Negro puro */
       --ks-black: oklch(0% 0 0);
       --ks-black-soft: oklch(12% 0.003 280);
-      
-      /* Grises fríos */
       --ks-gray-700: oklch(35% 0.008 280);
       --ks-gray-500: oklch(52% 0.01 280);
       --ks-gray-300: oklch(72% 0.01 278);
       --ks-gray-100: oklch(88% 0.005 278);
       --ks-gray-50: oklch(95% 0.002 280);
-      
-      /* Blanco */
       --ks-white: oklch(100% 0 0);
       --ks-white-off: oklch(98% 0.002 280);
-      
-      /* Verde menta (acento) */
       --ks-mint: oklch(80% 0.12 160);
       --ks-mint-dark: oklch(65% 0.10 160);
       --ks-mint-light: oklch(90% 0.08 160);
-      
-      /* Variables funcionales */
       --color-brand: var(--ks-black);
       --color-brand-hover: var(--ks-gray-700);
       --color-accent: var(--ks-mint);
@@ -174,7 +162,7 @@
       .hamburger { display: flex; }
     }
 
-    /* ===== HERO (full-width background) ===== */
+    /* ===== HERO ===== */
     .hero {
       min-height: 100dvh;
       display: flex; align-items: center;
@@ -236,10 +224,10 @@
       display: inline-flex; align-items: center; gap: 0.5rem;
       padding: 0.875rem 2rem;
       background: var(--color-brand);
-      color: white;
+      color: var(--ks-white);
       font-weight: 600;
       font-size: 0.95rem;
-      border: none; border-radius: 0.375rem;
+      border-radius: 0.375rem;
       cursor: pointer;
     }
     .btn-secondary {
@@ -253,59 +241,67 @@
       border-radius: 0.375rem;
       cursor: pointer;
     }
+    .btn-primary:hover { background: var(--color-brand-hover); }
+    .btn-secondary:hover { background: rgba(255,255,255,0.08); }
+    .hero-title em { transition: color 300ms var(--ease-out); }
+    .hero-title em:hover { color: var(--ks-mint-light); }
 
     /* ===== SERVICES ===== */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      gap: 1.5rem;
     }
-    @media (max-width: 768px) {
-      .services-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-    }
+    @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
     .service-card {
-      padding: 2.5rem 2rem;
+      background: var(--ks-white-off);
       border: 1px solid var(--color-border);
-      border-radius: 0.75rem;
-      background: var(--ks-white);
+      border-radius: 0.5rem;
+      padding: 2rem;
+      transition: transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
     }
+    .service-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
     .service-card.featured { border-color: var(--color-brand); position: relative; }
     .service-card.featured::before {
       content: 'POPULAR';
-      position: absolute; top: -0.75rem; right: 1.5rem;
-      font-size: 0.7rem; font-weight: 700;
-      letter-spacing: 0.1em;
-      padding: 0.25rem 0.75rem;
+      position: absolute; top: -0.5rem; right: 1rem;
       background: var(--ks-mint);
-      color: white;
-      border-radius: 1rem;
+      color: var(--ks-black);
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.05em;
+      padding: 0.25rem 0.5rem; border-radius: 0.25rem;
     }
-    .service-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
-    .service-name { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 0.5rem; }
-    .service-desc { font-size: clamp(0.9rem, 2.5vw, 1rem); color: var(--color-muted); line-height: 1.7; margin-bottom: 1.5rem; }
-    .service-price { font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 0.25rem; }
-    .service-price small { font-family: var(--font-body); font-size: 0.8rem; color: var(--color-muted); font-weight: 400; }
-    .strikethrough { text-decoration: line-through; opacity: 0.5; }
+    .service-icon { font-size: 1.5rem; display: block; margin-bottom: 1rem; }
+    .service-name {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    .service-desc {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    .service-price { font-size: 0.9rem; }
+    .service-price .strikethrough { text-decoration: line-through; color: var(--color-muted); }
+    .service-price strong { font-size: 1.1rem; }
+    .service-price small { font-size: 0.75rem; color: var(--color-muted); }
 
     /* ===== PROJECTS ===== */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      gap: 2rem;
     }
-    @media (max-width: 768px) {
-      .projects-grid { grid-template-columns: 1fr; }
-    }
-    .project-card {
-      padding: 1.5rem;
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 0.75rem;
-    }
+    @media (max-width: 768px) { .projects-grid { grid-template-columns: 1fr; } }
+    .project-card { transition: transform 200ms var(--ease-out); }
+    .project-card:hover { transform: translateY(-4px); }
     .project-image {
-      width: 100%; aspect-ratio: 4/3;
-      object-fit: cover; border-radius: 0.5rem;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 0.5rem;
       margin-bottom: 1rem;
-      transition: transform 300ms var(--ease-out);
     }
     .project-name {
       font-family: var(--font-display);
@@ -313,170 +309,254 @@
       font-weight: 700;
       margin-bottom: 0.75rem;
     }
-    .project-desc { font-size: clamp(0.875rem, 2.5vw, 1rem); opacity: 0.7; line-height: 1.6; }
+    .project-desc {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      line-height: 1.6;
+    }
 
     /* ===== ABOUT ===== */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
-      align-items: start;
+      align-items: center;
     }
-    @media (max-width: 768px) {
-      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-    }
-    .about-visual {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      border-radius: 1rem;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-    }
+    @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
+    .about-visual { border-radius: 0.5rem; }
     .about-text h2 {
       font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.1;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      line-height: 1.2;
       margin-bottom: 1.5rem;
     }
-    .about-text p { font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
-    .about-logos { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
-    .about-logo-item {
-      display: flex; align-items: center; gap: 1rem;
-      padding: 1rem 1.25rem;
-      border: 1px solid var(--color-border);
-      border-radius: 0.5rem;
-      background: var(--ks-white);
+    .about-text p {
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+      color: var(--color-muted);
+      margin-bottom: 1rem;
+      line-height: 1.7;
     }
-    .about-logo-icon { font-size: 1.5rem; flex-shrink: 0; }
-    .about-logo-name { font-weight: 600; }
-    .about-logo-role { font-size: 0.8rem; color: var(--color-muted); }
+    .about-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .about-logo-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .about-logo-icon { font-size: 1.25rem; }
+    .about-logo-name { font-weight: 600; font-size: 0.875rem; }
+    .about-logo-role { font-size: 0.75rem; color: var(--color-muted); }
 
     /* ===== CTA ===== */
-    .cta-section {
-      text-align: center;
-      padding: clamp(4rem, 8vw, 6rem) 0;
-    }
+    .cta-section { text-align: center; max-width: 600px; margin: 0 auto; }
     .cta-title {
       font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      margin-bottom: 1rem;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
     }
     .cta-sub {
-      font-size: 1.1rem;
-      color: var(--ks-gray-300);
-      max-width: 32rem;
-      margin: 0 auto 2.5rem;
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+      color: var(--color-muted);
+      margin-bottom: 2rem;
+      line-height: 1.7;
     }
 
     /* ===== FOOTER ===== */
-    .footer { padding: 3rem 0; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; opacity: 0.6; }
-    .footer-inner { display: flex; justify-content: space-between; align-items: center; }
-    @media (max-width: 640px) {
-      .footer-inner { flex-direction: column; gap: 0.5rem; text-align: center; }
+    .footer { padding: 2rem 0; }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--color-muted);
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
 
-    /* ===== ANIMATIONS (reduced) ===== */
+    /* ===== REVEAL ANIMATION ===== */
     .reveal {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-      .reveal { opacity: 1; transform: none; }
-    }
 
-    /* ===== INTERACTIONS ===== */
-    @media (hover: hover) and (pointer: fine) {
-      .header-cta:hover { background: var(--color-brand); color: white; }
-      .btn-secondary:hover { border-color: var(--color-brand); }
-      .project-card:hover .project-image { transform: scale(1.03); }
-      .service-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); }
-      .hero-title em { transition: color 300ms var(--ease-out); }
-      .hero-title em:hover { color: var(--color-accent); }
+    /* ===== SCROLL-DRIVEN ANIMATION (hero) ===== */
+    @media (prefers-reduced-motion: no-preference) {
+      @supports (animation-timeline: scroll()) {
+        .hero-title, .hero-sub, .hero-actions {
+          animation: fadeSlideIn 1s var(--ease-out) both;
+          animation-timeline: view();
+          animation-range: entry 0% entry 40%;
+        }
+      }
     }
-    .btn-primary:active, .btn-secondary:active { transform: scale(0.97); }
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
+
 <body>
+  <!-- HEADER -->
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="#" class="header-logo">KIOSHI SHIMABUKU</a>
-      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
       <nav class="header-nav" id="header-nav">
         <a href="#servicios" class="nav-link">Branding</a>
-        <a href="#proyectos" class="nav-link">Proyectos</a>
+        <a href="#proyectos" class="nav-link">Socios</a>
         <a href="#about" class="nav-link">Sobre mí</a>
         <a href="#contacto" class="header-cta nav-link" style="margin:0 0.5rem;">Conversemos</a>
       </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <!-- HERO con fondo de imagen real -->
+  <!-- HERO -->
   <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="hero-tag">Lima, Perú</div>
-        <h1 class="hero-title">Diseño con identidad y propósito.</h1>
-        <p class="hero-sub">
-          Identidad, sistemas digitales y dirección creativa para marcas que buscan 
-          impactar la cultura peruana a través del diseño con propósito.
-        </p>
-        <div class="hero-actions">
-          <a href="#contacto" class="btn-primary">Trabajemos juntos →</a>
-          <a href="#proyectos" class="btn-secondary">Ver proyectos</a>
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-tag">Lima, Perú</div>
+          <h1 class="hero-title">Diseño con identidad y propósito.</h1>
+          <p class="hero-sub">
+            Estrategia visual, identidad de marca, sistemas digitales y dirección creativa 
+            para marcas que buscan destacar con intención.
+          </p>
+          <div class="hero-actions">
+            <a href="#servicios" class="btn-primary">Ver servicios →</a>
+            <a href="#proyectos" class="btn-secondary">Ver proyectos</a>
+          </div>
         </div>
+        <div></div>
       </div>
-      <div></div>
     </div>
   </section>
 
-  <!-- SERVICES -->
+  <!-- SERVICIOS -->
   <section id="servicios" class="section">
     <div class="container">
-      <span class="label">Branding</span>
+      <span class="label">Servicios</span>
       <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.5rem);margin-bottom:2rem;line-height:1.2;">Soluciones que escalan<br>con tu visión</h2>
       <div class="services-grid">
         <div class="service-card reveal">
-          <span class="service-icon">🖥️</span>
-          <h3 class="service-name">Página Simple</h3>
-          <p class="service-desc">Para creativos, pequeños negocios y profesionales que necesitan presencia digital rápida. Landing page estratégica con dirección de arte y copy alineado a tu marca. Entrega: 1 semana.</p>
-          <div class="service-price"><span class="strikethrough">S/700</span> <strong>S/350</strong> <small>único</small></div>
-        </div>
-        <div class="service-card featured reveal">
-          <span class="service-icon">⚡</span>
-          <h3 class="service-name">Sistema Web</h3>
-          <p class="service-desc">Sitio web completo con arquitectura de información, sistema visual coherente, formularios inteligentes y SEO on-page. Para marcas establecidas que necesitan estructura digital sólida. Entrega: 2-3 semanas.</p>
-          <div class="service-price"><span class="strikethrough">S/1,500</span> <strong>S/700</strong> <small>único</small></div>
+          <span class="service-icon">🎯</span>
+          <h3 class="service-name">Estrategia Visual</h3>
+          <p class="service-desc">Dirección creativa y estratégica para marcas que buscan posicionarse con intención. Identidad visual, sistemas de diseño y narrativa de marca.</p>
         </div>
         <div class="service-card reveal">
-          <span class="service-icon">🌐</span>
-          <h3 class="service-name">Ecosistema Digital</h3>
-          <p class="service-desc">Dirección creativa completa liderada por Kioshi + sistema web + automatizaciones + brand guidelines digitales. Para empresas que necesitan un ecosistema digital integral.</p>
-          <div class="service-price"><strong>Desde S/2,500</strong> <small>— cotizar según alcance</small></div>
+          <span class="service-icon">⚡</span>
+          <h3 class="service-name">Sistemas Creativos IA</h3>
+          <p class="service-desc">Integración de herramientas de IA en flujos creativos y productivos. Automatización, generación de contenido y sistemas inteligentes para equipos creativos.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">🔧</span>
+          <h3 class="service-name">Fabricación Digital</h3>
+          <p class="service-desc">Prototipado, modelado 3D y producción con tecnologías de fabricación digital. Del concepto al objeto físico con precisión y estética.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="proyectos" class="section section-alt">
+  <!-- LLAMICORNIOS -->
+  <section id="llamicornios" class="section section-alt">
     <div class="container">
-      <span class="label">Proyectos</span>
-      <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.5rem);margin-bottom:2rem;line-height:1.2;">Creando cultura,<br>un proyecto a la vez</h2>
+      <span class="label">Llamicornios</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.5rem);margin-bottom:2rem;line-height:1.2;">Casa taller,<br>laboratorio de ideas</h2>
+      <div class="about-grid">
+        <div>
+          <p class="project-desc">Llamicornios es el espacio donde convergen moda, tecnología e identidad cultural. Un taller de experimentación donde los proyectos nacen, se prueban y se materializan.</p>
+        </div>
+        <div>
+          <p class="project-desc">Desde prendas conceptuales hasta experiencias digitales, Llamicornios funciona como plataforma creativa para explorar la intersección entre lo artesanal y lo tecnológico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIOS ESTRATÉGICOS -->
+  <section id="proyectos" class="section">
+    <div class="container">
+      <span class="label">Socios Estratégicos</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.5rem);margin-bottom:2rem;line-height:1.2;">Alianzas que<br>multiplican impacto</h2>
       <div class="projects-grid">
         <div class="project-card reveal">
-          <img src="img/metalmorfosis.webp" alt="Metalmorfosis pin" class="project-image" loading="lazy" width="1024" height="768">
+          <img src="img/metalmorfosis.webp" alt="Metalmorfosis" class="project-image" loading="lazy" width="1024" height="768">
           <h3 class="project-name">Metalmorfosis</h3>
-          <p class="project-desc">Editorial de pines con identidad cultural peruana. Colecciones limitadas que reimaginan símbolos nacionales con estética contemporánea. Co-fundado con Jotaconpe.</p>
+          <p class="project-desc">Editorial de pines con identidad cultural peruana. Colecciones limitadas que reimaginan símbolos nacionales con estética contemporánea. Co-fundado con Jotaconpe y Geronimo Campos.</p>
         </div>
         <div class="project-card reveal">
-          <img src="img/libretacticas.webp" alt="Libretácticas producto" class="project-image" loading="lazy" width="1536" height="1024">
+          <img src="img/libretacticas.webp" alt="Libretácticas" class="project-image" loading="lazy" width="1536" height="1024">
           <h3 class="project-name">Libretácticas</h3>
-          <p class="project-desc">Sistema de captura de ideas para mentes que no se detienen. Libreta táctica de cintura con apertura one-hand, cierre magnético y lapicero integrado. Founders Edition seriada.</p>
+          <p class="project-desc">Sistema de captura de ideas para mentes que no se detienen. Libreta táctica de cintura con apertura one-hand, cierre magnético y lapicero integrado. Co-fundado con Benja.</p>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-image" style="background:var(--ks-black-soft);display:flex;align-items:center;justify-content:center;color:var(--ks-gray-100);font-weight:700;font-size:1.5rem;">QNTM</div>
+          <h3 class="project-name">QNTM</h3>
+          <p class="project-desc">Marca de moda conceptual que explora la intersección entre identidad peruana y estética futurista. Diseño de prendas, sistemas visuales y narrativa de marca.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOYS & WEAR -->
+  <section id="toys-wear" class="section section-alt">
+    <div class="container">
+      <span class="label">Toys & Wear</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.5rem);margin-bottom:2rem;line-height:1.2;">Moda + objeto,<br>con identidad propia</h2>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-image" style="background:var(--ks-black-soft);display:flex;align-items:center;justify-content:center;color:var(--ks-gray-100);font-weight:700;font-size:1.5rem;">🧥</div>
+          <h3 class="project-name">Chullamicornio</h3>
+          <p class="project-desc">Prenda conceptual que fusiona la tradición andina con estética contemporánea. Experimentación textil y narrativa de identidad cultural.</p>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-image" style="background:var(--ks-black-soft);display:flex;align-items:center;justify-content:center;color:var(--ks-gray-100);font-weight:700;font-size:1.5rem;">👜</div>
+          <h3 class="project-name">Cartera Chacana</h3>
+          <p class="project-desc">Accesorio funcional con símbolos de identidad peruana. Diseño de producto que conecta lo utilitario con lo simbólico.</p>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-image" style="background:var(--ks-black-soft);display:flex;align-items:center;justify-content:center;color:var(--ks-gray-100);font-weight:700;font-size:1.5rem;">🕯️</div>
+          <h3 class="project-name">Fósforos Llamicornios</h3>
+          <p class="project-desc">Objeto de diseño que transforma lo cotidiano en pieza de conversación. Packaging, identidad y producción de serie limitada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIAS EN MINECRAFT -->
+  <section id="minecraft" class="section">
+    <div class="container">
+      <span class="label">Experiencias en Minecraft</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.5rem);margin-bottom:2rem;line-height:1.2;">Mundos digitales,<br>cultura tangible</h2>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-image" style="background:var(--ks-black-soft);display:flex;align-items:center;justify-content:center;color:var(--ks-gray-100);font-weight:700;font-size:1.5rem;">🏝️</div>
+          <h3 class="project-name">Link Island</h3>
+          <p class="project-desc">Isla experiencial en Minecraft con arquitectura conceptual, espacios interactivos y narrativa inmersiva. Un mundo construido con intención.</p>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-image" style="background:var(--ks-black-soft);display:flex;align-items:center;justify-content:center;color:var(--ks-gray-100);font-weight:700;font-size:1.5rem;">🏛️</div>
+          <h3 class="project-name">Museo Motelo</h3>
+          <p class="project-desc">Museo virtual que exhibe artefactos digitales y narrativas culturales. Espacio de memoria colectiva construido en bloques.</p>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-image" style="background:var(--ks-black-soft);display:flex;align-items:center;justify-content:center;color:var(--ks-gray-100);font-weight:700;font-size:1.5rem;">🌊</div>
+          <h3 class="project-name">Museo Submarino</h3>
+          <p class="project-desc">Experiencia subacuática de exploración cultural. Arquitectura orgánica y ambientes inmersivos que cuentan historias desde las profundidades.</p>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-image" style="background:var(--ks-black-soft);display:flex;align-items:center;justify-content:center;color:var(--ks-gray-100);font-weight:700;font-size:1.5rem;">🇦🇶</div>
+          <h3 class="project-name">Perú en la Antártida</h3>
+          <p class="project-desc">Representación digital de la presencia peruana en el continente blanco. Historia, ciencia y soberanía en formato experiencial.</p>
         </div>
         <div class="project-card reveal">
           <img src="img/llami-claw.webp" alt="Llami Claw" class="project-image" loading="lazy" width="1122" height="1402">
@@ -488,7 +568,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section">
+  <section id="about" class="section section-alt">
     <div class="container about-grid">
       <div>
         <img src="img/kioshi-profile.webp" alt="Kioshi Shimabuku" class="about-visual" loading="lazy" width="1024" height="1536">
@@ -498,7 +578,7 @@
         <h2>Estratega visual,<br>director creativo,<br>educador</h2>
         <p>
           Estratega visual, director creativo y educador peruano. Desde mi casa-taller 
-          <strong>Llamicornios Funky Paradas</strong> en Jesús María, Lima, desarrollo 
+          <strong>Llamicornios Funky Paradise</strong> en Jesús María, Lima, desarrollo 
           proyectos que cruzan moda, tecnología e identidad cultural.
         </p>
         <p>
@@ -534,7 +614,7 @@
   </section>
 
   <!-- CTA -->
-  <section id="contacto" class="section section-alt">
+  <section id="contacto" class="section">
     <div class="container cta-section">
       <h2 class="cta-title">¿Listo para crear algo<br>que realmente importe?</h2>
       <p class="cta-sub">
@@ -578,15 +658,8 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, { threshold: 0.1, rootMargin: '50px' });
+    }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-      document.getElementById('header').classList.toggle('scrolled', currentScroll > 50);
-      lastScroll = currentScroll;
-    }, { passive: true });
   </script>
 </body>
 </html>
