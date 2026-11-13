@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kioshi Shimabuku — Estrategia Visual, Identidad y Sistemas Digitales</title>
+  <title>Kioshi Shimabuku — Estrategia Visual y Dirección Creativa</title>
   <meta name="description" content="Estrategia visual, identidad de marca, sistemas digitales y dirección creativa. Basado en Lima, Perú.">
   <meta property="og:title" content="Kioshi Shimabuku — Estrategia Visual">
   <meta property="og:description" content="Identidad, sistemas digitales y dirección creativa para marcas que buscan destacar.">
@@ -55,6 +55,7 @@
       --ks-gray-100: oklch(88% 0.005 278);
       --ks-gold: oklch(65% 0.14 78);
       --ks-gold-soft: oklch(75% 0.09 82);
+      --ks-gold-ink: oklch(50% 0.12 70);   /* gold accesible sobre fondo claro: 5.3:1 */
       --ks-cream: oklch(95% 0.007 90);
       --ks-white: oklch(100% 0 0);
       --ks-white-off: oklch(98% 0.002 280);
@@ -92,7 +93,8 @@
     .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
     .section { padding: var(--spacing-section) 0; }
     .section-alt { background: var(--color-surface-alt); color: var(--color-text-inverse); }
-    .section-alt a { color: var(--color-accent); }
+    .section-alt a:not(.btn-primary) { color: var(--color-accent); }
+    .section-alt .label { color: var(--color-accent); }
     .label {
       display: inline-block;
       font-family: var(--font-body);
@@ -100,7 +102,7 @@
       font-weight: 600;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--color-accent);
+      color: var(--ks-gold-ink);
       margin-bottom: 1rem;
     }
 
@@ -431,7 +433,7 @@
     }
     .cta-sub {
       font-size: 1.1rem;
-      color: var(--color-muted);
+      color: var(--color-text-inverse);
       max-width: 32rem;
       margin: 0 auto 2.5rem;
     }
@@ -481,11 +483,11 @@
     }
   </style>
 </head>
-<body>
+<body id="top">
   <!-- HEADER -->
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="#" class="header-logo">Kioshi Shimabuku</a>
+      <a href="#top" class="header-logo">Kioshi Shimabuku</a>
       <nav class="header-nav">
         <a href="#servicios">Servicios</a>
         <a href="#proyectos">Proyectos</a>
@@ -587,7 +589,11 @@
       </div>
       <div class="about-visual">
         <div class="about-image reveal">
-          <img src="images/kioshi-llamicornio.jpg" alt="Kioshi Shimabuku" loading="lazy" />
+          <img src="images/kioshi-llamicornio-960.webp"
+               srcset="images/kioshi-llamicornio-480.webp 480w, images/kioshi-llamicornio-960.webp 960w"
+               sizes="(max-width: 760px) 90vw, 420px"
+               width="1080" height="1350"
+               alt="Kioshi Shimabuku" loading="lazy" decoding="async" />
         </div>
         <div class="about-logos">
           <div class="about-logo-item reveal">
